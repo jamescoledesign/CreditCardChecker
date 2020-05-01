@@ -26,18 +26,18 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 // Add your functions below:
 
 function validateCred(arr) {
-    let withDoubles = [];
     for (let i = arr.length - 1; i <= arr.length; i--) {
         if(i === -1) {
             break;
         }
         if((arr.length - 1 - i) % 2 != 0) { 
-        arr[i] *= 2;
+            arr[i] *= 2;
+            if(arr[i] > 9) {
+                arr[i] -= 9;
+            }
         }
-        withDoubles = arr[i];
-        console.log(withDoubles);
+        console.log(arr[i]);
     }
-        
 }
 
-validateCred(mystery5)
+validateCred(mystery4)
