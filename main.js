@@ -25,10 +25,22 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 // Add your functions below:
 
+// Iterate array in reverse 
 
+function validateCred(arr) {
+    for (let i = arr.length; i <= arr.length; i--) {
+        console.log(arr[i]); {
+            if(i === 0) {
+                break;
+            }
+        }  
+    }
+}
 
+/* function forwards() { 
+    for (let i = 0; i < mystery5.length; i++) {
+        console.log(mystery5[i]);
+    }
+} */
 
-
-
-
-
+validateCred(mystery5);
