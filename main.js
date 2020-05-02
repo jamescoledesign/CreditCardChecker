@@ -26,6 +26,9 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 // Add your functions below:
 
 function validateCred(arr) {
+    let newArray = 0;
+    let arrayTotal = 0;
+    // Reverse, double every other digit, subtract 9 for numbers greater than 9
     for (let i = arr.length - 1; i <= arr.length; i--) {
         if(i === -1) {
             break;
@@ -36,8 +39,15 @@ function validateCred(arr) {
                 arr[i] -= 9;
             }
         }
-        console.log(arr[i]);
+        newArray = arr[i];
+        console.log(newArray);
+
     }
+    
+    // Sum up all the digits 
+
+    console.log("This is the total: " + arrayTotal)
+
 }
 
-validateCred(mystery4)
+validateCred(mystery5);
