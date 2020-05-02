@@ -46,6 +46,12 @@ function validateCred(arr) {
 
     sum = sum + arrPop;
 
+    if (sum % 10 === 0) {
+        console.log("The card number is valid.");
+    } else {
+        console.log("The card number is invalid.");
+    }
+
     console.log("This is final array: " + arrCopy);
     console.log("This is the popped value: " + arrPop)
     console.log("This is the sum: " + sum);
