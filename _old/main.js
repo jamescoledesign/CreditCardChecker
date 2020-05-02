@@ -22,22 +22,26 @@ const mystery5 = [4, 9, 1, 3, 5, 4, 0, 4, 6, 3, 0, 7, 2, 5, 2, 3]
 // An array of all the arrays above
 const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, invalid3, invalid4, invalid5, mystery1, mystery2, mystery3, mystery4, mystery5]
 
+
 // Add your functions below:
 
 function validateCred(arr) {
-    let arrCopy = arr;
-    let arrPop = arrCopy.pop();
-    arrCopy = arrCopy.reverse();
-    console.log("This is reversed/popped: " + arrCopy);
-    
-    for(var i = 0; i < arrCopy.length; i++) {
-        if((arrCopy.length - 1 - i) % 2 != 0) {
-            arrCopy[i] *= 2;
+    let arrayTotal= 0; 
+    let newArray = [];
+    // Reverse, double every other digit, subtract 9 for numbers greater than 9
+    for (let i = arr.length - 1; i <= arr.length; i--) {
+        if(i === -1) {
+            break;
         }
+        if((arr.length - 1 - i) % 2 != 0) { 
+            arr[i] *= 2;
+            if(arr[i] > 9) {
+                arr[i] -= 9;
+            }
+        }
+        newArray = arr[i];
+        console.log(newArray);
     }
-
-    console.log("This is final output: " + arrCopy);
 }
 
-console.log("This is the original: " + mystery5);
 validateCred(mystery5);
