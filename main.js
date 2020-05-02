@@ -25,6 +25,7 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 // Add your functions below:
 
 function validateCred(arr) {
+    let sum = 0; 
     let arrCopy = arr;
     let arrPop = arrCopy.pop();
     arrCopy = arrCopy.reverse();
@@ -33,11 +34,23 @@ function validateCred(arr) {
     for(var i = 0; i < arrCopy.length; i++) {
         if((arrCopy.length - 1 - i) % 2 != 0) {
             arrCopy[i] *= 2;
+            if(arrCopy[i] > 9) {
+                arrCopy[i] = arrCopy[i] - 9;
+            }
         }
     }
 
-    console.log("This is final output: " + arrCopy);
+    for(let j = 0; j < arrCopy.length; j++) {
+        sum = sum + arrCopy[j];
+    }
+
+    sum = sum + arrPop;
+
+    console.log("This is final array: " + arrCopy);
+    console.log("This is the popped value: " + arrPop)
+    console.log("This is the sum: " + sum);
+    
 }
 
-console.log("This is the original: " + mystery5);
+console.log("This is the original array: " + mystery5);
 validateCred(mystery5);
