@@ -26,11 +26,11 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 // Check if number is valid
 function validateCred(arr) {
+    // console.log(`Card number ${arr}`);
     let sum = 0; 
     let arrCopy = arr;
     let arrPop = arrCopy.pop();
     arrCopy = arrCopy.reverse();
-    console.log("Reversed/popped: " + arrCopy);
     
     for(var i = 0; i < arrCopy.length; i++) {
         if(i !== 0 && i % 2 === 0) {
@@ -47,24 +47,10 @@ function validateCred(arr) {
 
     sum = sum + arrPop;
 
-    if (sum % 10 === 0) {
-        console.log("The card number is valid.");
-    } else {
-        console.log("The card number is invalid.");
-    }
-
-    console.log("Final array: " + arrCopy);
-    console.log("Popped value: " + arrPop)
-    console.log("Sum: " + sum);
-    
+    return sum % 10 === 0;
 }
 
-console.log("Original array: " + invalid1);
-validateCred(invalid1);
+console.log(validateCred(valid1));
+console.log(validateCred(invalid1));
 
-console.log("Original array: " + valid1);
-validateCred(valid1);
-
-console.log("---Everything above is a test of validateCred()---")
-
-// Check nested array
+console.log("---Above is test validateCred()---");
