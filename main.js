@@ -127,3 +127,9 @@ function idInvalidCardCompanies(invalidArr) {
 }
 
 console.log(idInvalidCardCompanies(batch));
+
+/* I wish I didn't need to rely so much on the example solution, 
+but after a month of attempts on this project I decided continuing 
+with the JS course was more important than struggling on this one project. 
+I'm happy I at least created a unique solution for validateCred() on my own.
+*/ 
