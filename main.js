@@ -91,3 +91,39 @@ function findInvalidCards(arr) {
 console.log(findInvalidCards([valid1, valid2, valid3]));
 console.log(findInvalidCards([invalid1, invalid2, invalid3]));
 console.log(findInvalidCards(batch));
+
+// Companies that issued Invalid Cards
+
+function idInvalidCardCompanies(invalidArr) {
+  const companies = []; 
+  let unknownCompany = "Unkown Company";
+  for (let i = 0; i < invalidArr.length; i++) {
+    switch (invalidArr[i][0]) {
+      case 3: 
+        if (companies.indexOf('Amex') === -1) {
+          companies.push('Amex');
+        }
+        break
+      case 4: 
+        if (companies.indexOf('Visa') === -1) {
+          companies.push('Visa');
+        }
+        break
+      case 5: 
+        if (companies.indexOf('Mastercard') === -1) {
+          companies.push('Mastercard');
+        }
+        break
+      case 6: 
+        if (companies.indexOf('Discover') === -1) {
+          companies.push('Discover');
+        }
+        break
+      default: 
+        console.log(unknownCompany);
+      }
+    }
+  return companies;
+}
+
+console.log(idInvalidCardCompanies(batch));
