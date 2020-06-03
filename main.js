@@ -75,4 +75,19 @@ function validateCred(arr) {
   }
 }
 
-console.log(validateCred(valid1));
+// Find the Invalid Cards
+
+function findInvalidCards(arr) {
+  let invalidCards = [];
+  for(let i=0; i < arr.length; i++) {
+    let thisCard = arr[i];
+    if(!validateCred(thisCard)) {
+      invalidCards.push(thisCard);
+    }
+  }
+  return invalidCards;
+}
+
+console.log(findInvalidCards([valid1, valid2, valid3]));
+console.log(findInvalidCards([invalid1, invalid2, invalid3]));
+console.log(findInvalidCards(batch));
