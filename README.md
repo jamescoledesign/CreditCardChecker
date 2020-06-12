@@ -1,4 +1,4 @@
 # CreditCardChecker
 Credit card checker project for Codecademy. 
 
--Edits made to main.js
+This project checks if a credit card number is valid. 
